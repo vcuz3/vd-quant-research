@@ -1,0 +1,10 @@
+{
+    "hypothesis_ID": 0,
+    "date": "insert date",
+    "statement": "one falsifiable sentence: instrument, horizon, direction, magnitude",
+    "ledger_row": "which row: 1) risk compensation (predictable return that pays for wearing skew, tails, or drawdowns [carry, credit, vol selling] - earned, not found. 2) constrained flow: calendars and mandates (refer to TD-K7) - someone MUST trade, and their necessity is your predictability. 3) microstructure: spreads, queue value, adverse selection - rents, real, and capacity-limited (refer to TD-K2). 4) slow information: diffusion of news through inattentive holders - the momentum family's best defense. 5) none of the above: if a claimed edge fits no row, the presumption is TD-S5's garden until proven otherwise.",
+    "mechanism": "2-3 sentences: why this SHOULD exist, written before knowing whether it does.",
+    "evidence_standard": "the numbers that count as confirmation: min sample, net-of-cost threshold, correction applied.",
+    "trial_budget": "how many variants will be tried before the correction denominator grows: declared, capped.",
+    "kill_condition": "what result kills it: written now, while you do not yet care about the answer."
+}

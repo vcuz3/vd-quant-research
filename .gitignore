@@ -1,0 +1,9 @@
+# Ignore environment files
+.venv/
+__pycache__/
+
+# Ignore CSV data at any depth below data/
+data/**/*.csv
+
+# Ignore output png
+*.png

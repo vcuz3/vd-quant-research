@@ -2,8 +2,9 @@
 .venv/
 __pycache__/
 
-# Ignore CSV data at any depth below data/
+# Ignore CSV data at any depth below data/ and bootcamp_exercises
 data/**/*.csv
+bootcamp_exercises/**/*.csv
 
 # Ignore output png
 *.png

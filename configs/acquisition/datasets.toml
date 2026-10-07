@@ -1,0 +1,103 @@
+[datasets.audusd]
+source = "ibkr"
+symbol = "AUDUSD"
+granularity = "1h"
+bar_size = "1 hour"
+price_type = "MIDPOINT"
+units = "USD per AUD"
+observation_timezone = "UTC"
+chunk_months = 1 # Calendar-month chunks for hourly/daily bars.
+boundary_padding_days = 1 # Retain overlap so IBKR session boundaries cover UTC start.
+pacing_seconds = 10
+methodology_ref = "ibkr_audusd"
+
+[datasets.nzdusd]
+source = "ibkr"
+symbol = "NZDUSD"
+granularity = "1h"
+bar_size = "1 hour"
+price_type = "MIDPOINT"
+units = "USD per NZD"
+observation_timezone = "UTC"
+chunk_months = 1 # Calendar-month chunks for hourly/daily bars.
+boundary_padding_days = 1 # Retain overlap so IBKR session boundaries cover UTC start.
+pacing_seconds = 10
+methodology_ref = "ibkr_nzdusd"
+
+[datasets.au_2y]
+source = "rba"
+symbol = "FCMYGBAG2D"
+granularity = "daily"
+units = "percent per annum"
+observation_timezone = "date-only; Australian market"
+methodology_ref = "rba_au_2y"
+
+[datasets.us_2y]
+source = "fred"
+symbol = "DGS2"
+granularity = "daily"
+units = "percent per annum"
+observation_timezone = "date-only; US market"
+methodology_ref = "fred_dgs2"
+
+[datasets.vix]
+source = "fred"
+symbol = "VIXCLS"
+granularity = "daily close"
+units = "index points; annualized volatility percent"
+observation_timezone = "date-only; US market"
+methodology_ref = "fred_vix"
+
+[datasets.es]
+source = "databento"
+dataset = "GLBX.MDP3"
+symbol = "ES.v.0"
+schema = "ohlcv-1h"
+granularity = "1h"
+units = "index points"
+observation_timezone = "UTC"
+chunk_days = 30
+methodology_ref = "databento_es"
+
+[datasets.gold]
+source = "databento"
+dataset = "GLBX.MDP3"
+symbol = "GC.v.0"
+schema = "ohlcv-1h"
+granularity = "1h"
+units = "USD per troy ounce"
+observation_timezone = "UTC"
+chunk_days = 30
+methodology_ref = "databento_gold"
+
+[datasets.copper]
+source = "databento"
+dataset = "GLBX.MDP3"
+symbol = "HG.v.0"
+schema = "ohlcv-1h"
+granularity = "1h"
+units = "USD per pound"
+observation_timezone = "UTC"
+chunk_days = 30
+methodology_ref = "databento_copper"
+
+[datasets.iron_ore_monthly]
+source = "fred"
+symbol = "PIORECRUSDM"
+granularity = "monthly"
+units = "USD per metric ton"
+observation_timezone = "date-only; observation month is not publication time"
+methodology_ref = "iron_ore"
+note = "Optional IMF monthly series; not a substitute for daily iron ore returns."
+
+[datasets.iron_ore_daily]
+source = "unresolved"
+granularity = "daily"
+methodology_ref = "iron_ore"
+note = "Choose a licensed spot assessment or specific futures contract series, verify coverage and benchmark transitions, obtain a cost quote."
+
+[datasets.coal]
+source = "unresolved"
+granularity = "daily"
+methodology_ref = "coal"
+note = "HYP_1 names coal. Choose thermal/coking benchmark, location, units, source and historical coverage before implementing."

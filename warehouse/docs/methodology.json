@@ -1,0 +1,29 @@
+{
+  "reviewed_on": "2026-10-05",
+  "change_review_start": "2011-10-05",
+  "change_review_end": "2026-10-05",
+  "report": "warehouse/docs/METHODOLOGY.md",
+  "exhaustive_change_history": false,
+  "datasets": {
+    "ibkr_audusd": {"section": "AUDUSD — IBKR", "history_status": "incomplete", "adjustment_policy": "native quote fields preserved"},
+    "rba_au_2y": {"section": "Australian 2-year yield — RBA F2", "history_status": "confirmed notices; availability incomplete", "observed_nonmissing_start": "2013-09-02"},
+    "fred_dgs2": {"section": "US 2-year yield — FRED DGS2", "history_status": "confirmed 2021 construction change"},
+    "databento_es": {"section": "Equity factor — ES futures", "history_status": "confirmed settlement-time change; other history incomplete"},
+    "databento_gold": {"section": "Gold and copper — GC and HG futures", "history_status": "confirmed settlement amendment; other history incomplete"},
+    "databento_copper": {"section": "Gold and copper — GC and HG futures", "history_status": "confirmed settlement amendment; other history incomplete"},
+    "fred_vix": {"section": "VIX — FRED VIXCLS / upstream Cboe", "history_status": "confirmed 2014 inputs and 2016 dissemination changes"},
+    "iron_ore": {"section": "Iron ore — source decision still open", "history_status": "Platts changes confirmed; daily source unresolved"},
+    "coal": {"section": "Coal and remaining research decisions", "history_status": "source and definition unresolved"}
+  },
+  "changes": [
+    {"effective_date": "2014-10-06", "datasets": ["vix"], "kind": "calculation_inputs", "label": "Weekly options added", "source": "https://cdn.cboe.com/resources/education/research_publications/VIXInterpolationWhitepaper.pdf"},
+    {"effective_date": "2016-04-15", "datasets": ["vix"], "kind": "dissemination", "label": "Overnight index publication", "source": "https://ir.cboe.com/news/news-details/2016/CBOE-to-Start-Overnight-Dissemination-of-CBOE-Volatility-Index-VIX-April-15-04-13-2016/default.aspx"},
+    {"effective_date": "2017-10-23", "datasets": ["gold", "copper"], "kind": "settlement_methodology", "label": "Tiered settlement criteria", "applies_to": "exchange settlement; not OHLCV close", "source": "https://www.cmegroup.com/market-regulation/rule-filings/2017/09/17-358_1.pdf"},
+    {"effective_date": "2018-01-02", "datasets": ["iron_ore_daily"], "kind": "benchmark_alignment", "label": "TSI and IODEX alignment", "source": "https://www.spglobal.com/energy/en/pricing-benchmarks/our-methodology/subscriber-notes/070617-platts-to-merge-tsi-62-amp-iodex-price-series-from-jan-2018"},
+    {"effective_date": "2020-10-26", "datasets": ["es"], "kind": "settlement_clock", "label": "15:15 to 15:00 Central", "applies_to": "exchange settlement; not OHLCV close", "source": "https://www.cmegroup.com/notices/ser/2020/09/SER-8591.pdf"},
+    {"effective_date": "2021-12-06", "datasets": ["us_2y"], "kind": "curve_construction", "label": "Monotone-convex curve introduced", "source": "https://home.treasury.gov/policy-issues/financing-the-government/interest-rate-statistics/treasury-yield-curve-methodology"},
+    {"effective_date": "2023-03-31", "datasets": ["au_2y"], "kind": "methodology_and_archive", "label": "Historical deletion and calculation changes", "source": "https://www.rba.gov.au/statistics/tables/changes-to-tables.html"},
+    {"effective_date": "2023-12-29", "datasets": ["au_2y"], "kind": "assessment_and_release", "label": "RBA assessments; weekly release", "source": "https://www.rba.gov.au/statistics/tables/changes-to-tables.html"},
+    {"effective_date": "2026-01-02", "datasets": ["iron_ore_daily"], "kind": "quality_specification", "label": "IODEX 62% to 61% Fe", "source": "https://www.spglobal.com/energy/en/pricing-benchmarks/our-methodology/subscriber-notes/010226-platts-updates-iodex-quality-specifications-to-reflect-61-fe-effective-jan-2-2026"}
+  ]
+}

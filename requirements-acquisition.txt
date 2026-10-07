@@ -1,0 +1,4 @@
+# Optional providers only. Public FRED/RBA acquisition and offline tests use stdlib.
+databento>=0.60,<1
+ib_async>=2,<3
+pandas>=2,<4

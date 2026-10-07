@@ -8,3 +8,15 @@ bootcamp_exercises/**/*.csv
 
 # Ignore output png
 *.png
+
+# Acquisition secrets and generated artifacts (manifests stay next to raw files).
+.env
+.env.*
+!.env.example
+warehouse/meta.sqlite*
+warehouse/runs/
+warehouse/reports/
+warehouse/data/raw/**
+!warehouse/data/raw/.gitkeep
+warehouse/data/processed/**
+!warehouse/data/processed/.gitkeep

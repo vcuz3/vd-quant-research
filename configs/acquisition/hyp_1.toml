@@ -1,0 +1,7 @@
+[run]
+hypothesis = "journal/hypothesis/HYP_1.json"
+# Acquisition window only, NOT a frozen research/OOS split. Includes warm-up.
+start = "2010-01-01"
+end = "2026-10-01" # Exclusive; explicit, reproducible completed-date cutoff.
+frequency = "1h" # AUDUSD/futures only; FRED/RBA keep native daily/monthly frequency.
+datasets = ["audusd", "nzdusd", "au_2y", "us_2y", "vix", "es", "gold", "copper"]
